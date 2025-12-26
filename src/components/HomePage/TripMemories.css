@@ -1,0 +1,143 @@
+/* CONTAINER */
+.memories-container {
+  margin: 20px auto;
+  padding: 22px;
+  max-width: 1100px; /* smaller width */
+  border-radius: 20px;
+  background: rgba(0, 51, 255, 0.08);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+/* CARD */
+.memory-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* IMAGE */
+.memory-image-wrapper {
+  position: relative;
+  flex: 0.55;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.memory-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* META (date + place on image) */
+.memory-meta {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 10px;
+}
+
+/* RIGHT SIDE CONTENT */
+.memory-comment {
+  flex: 0.45;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* COMMENT TEXT */
+.comment-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+/* USER BLOCK */
+.comment-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comment-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-user strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.comment-user span {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* CLICKABLE LINKS */
+.guide-link,
+.city-link {
+  font-size: 0.85rem;
+  color: #0033ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.guide-link:hover,
+.city-link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* TITLE */
+.memories-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .memory-card {
+    flex-direction: column;
+  }
+
+  .memory-image-wrapper {
+    width: 100%;
+    height: 240px;
+  }
+
+  .memory-comment {
+    text-align: center;
+  }
+
+  .comment-user {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .memories-container {
+    padding: 18px;
+  }
+
+  .comment-text {
+    font-size: 0.95rem;
+  }
+}

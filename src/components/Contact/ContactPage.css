@@ -1,0 +1,151 @@
+.contact-page {
+  padding: 80px 6%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* HERO */
+.contact-hero {
+  text-align: center;
+}
+
+.contact-hero h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  color: #6f6f6f;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* INFO CARDS */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background-color: #e68405;
+  padding: 25px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 220px;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.info-icon {
+  font-size: 28px;
+  color: #fbfbfb;
+  margin-bottom: 12px;
+}
+
+.info-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #fcfcfc;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #d1cece;
+}
+
+/* FORM */
+.contact-form-section {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form-section h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  resize: none;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e68405;
+  box-shadow: 0 4px 15px rgba(243, 141, 104, 0.3);
+}
+
+.contact-form button {
+  padding: 16px 0;
+  background: #e68405;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .contact-info {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-page {
+    padding: 60px 4%;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form-section h3 {
+    font-size: 1.7rem;
+  }
+}

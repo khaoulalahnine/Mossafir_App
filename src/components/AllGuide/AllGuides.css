@@ -1,0 +1,256 @@
+/* AllGuides.css */
+
+:root {
+  --primary: #e85f0aff ;
+  --accent: #ffd700;
+  --white: #ffffff;
+  --gray-light: #f9f9f9;
+  --gray-medium: #888;
+  --border-color: #eee;
+  --shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* CONTAINER & LAYOUT */
+.container {
+  padding: 50px 5%;
+  font-family: 'Inter', -apple-system, sans-serif;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* 1, 2, 3: FILTER CONTROLS */
+.filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.filter-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-select {
+  padding: 14px 20px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  background: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  outline: none;
+  min-width: 200px;
+  transition: var(--transition);
+}
+
+.custom-select:hover {
+  border-color: var(--accent);
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 4. DYNAMIC SEARCH RESULTS SECTION */
+.search-results-box {
+  background: #fffcf0; /* Light gold tint to highlight search results */
+  padding: 40px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  margin-bottom: 80px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin-top: 60px;
+}
+
+/* 5, 6, 7: GUIDES SECTIONS */
+.guides-section {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.guides-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: var(--primary);
+  text-align: left;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+/* 8. GUIDE CARD (REUSABLE) */
+.guide-card {
+  position: relative;
+  height: 380px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  background: #eee;
+}
+
+.guide-card:hover {
+  transform: translateY(-10px);
+}
+
+.guide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SAVE ICON */
+.guide-save {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* OVERLAY & CONTENT */
+.guide-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    transparent 100%
+  );
+  color: white;
+  box-sizing: border-box;
+}
+
+.guide-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.guide-overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.guide-city {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 4px 0;
+}
+
+.guide-specialty {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+/* LANGUAGES TAG */
+.guide-languages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(4px);
+  text-transform: capitalize;
+}
+
+/* BUTTON */
+.guide-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 18px;
+  border: none;
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.guide-btn:hover {
+  background: var(--accent);
+}
+
+/* NOT FOUND STATE */
+.not-found-mini {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f1f1f1;
+  border-radius: 25px;
+  border: 2px dashed #ccc;
+  color: var(--gray-medium);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .guides-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .guide-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .guides-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .custom-select {
+    width: 100%;
+  }
+}

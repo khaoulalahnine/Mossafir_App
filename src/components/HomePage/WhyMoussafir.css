@@ -1,0 +1,90 @@
+.why-container {
+  margin: 40px 20px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 51, 255, 0.08);
+  backdrop-filter: blur(15px);
+}
+
+.why-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.why-description {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-carousel-wrapper {
+  overflow: hidden;
+}
+
+.why-carousel {
+  display: flex;
+  gap: 20px;
+}
+
+.why-card {
+  flex: 0 0 33.33%; /* 3 cards visible */
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.why-card-img {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.why-card-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(1); /* clear image */
+}
+
+.why-card-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.why-card-title {
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.why-card-desc {
+  font-size: 0.9rem;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-carousel {
+    gap: 20px;
+  }
+
+  .why-card {
+    flex: 0 0 80%; /* show 1-2 cards on mobile */
+  }
+}

@@ -1,0 +1,87 @@
+.carousel-wrapper {
+  padding: 70px 5%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.carousel-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  max-width: 1100px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px;
+  scrollbar-width: none;
+}
+
+.carousel-grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+.carousel-wrapper {
+  padding: 20px 5%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.carousel-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .carousel-title {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile — STACK */
+@media (max-width: 768px) {
+  .carousel-grid {
+    flex-direction: column; /* ⬅ one under one */
+    gap: 22px;
+  }
+
+  .carousel-wrapper {
+    padding: 50px 20px;
+  }
+
+  .carousel-title {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+}

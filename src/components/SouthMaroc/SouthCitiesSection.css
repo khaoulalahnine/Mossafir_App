@@ -1,0 +1,67 @@
+.south-cities-section {
+  padding: 70px 5%;
+  background-color: #ffffff;
+}
+
+.south-cities-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+}
+
+/* GRID — 5 CARDS PER LINE */
+.south-cities-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Large laptops */
+@media (max-width: 1280px) {
+  .south-cities-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .south-cities-title {
+    font-size: 2rem;
+  }
+
+  .south-cities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .south-cities-section {
+    padding: 50px 20px;
+  }
+
+  .south-cities-title {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  .south-cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .south-cities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .south-cities-title {
+    font-size: 1.5rem;
+  }
+}
